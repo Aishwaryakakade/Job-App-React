@@ -24,7 +24,6 @@ const Profile = () => {
       toast.error("Please Fill Out All Fields");
       return;
     }
-
     dispatch(updateUser(userData));
   };
   const handleChange = (e) => {
@@ -42,26 +41,26 @@ const Profile = () => {
             type="text"
             name="name"
             value={userData.name}
-            handleChange={handleChange}
+            handleFormRowChange={handleChange}
           />
           <FormRow
             type="text"
             labelText="last name"
             name="lastName"
             value={userData.lastName}
-            handleChange={handleChange}
+            handleFormRowChange={handleChange}
           />
           <FormRow
             type="email"
             name="email"
             value={userData.email}
-            handleChange={handleChange}
+            handleFormRowChange={handleChange}
           />
           <FormRow
             type="text"
             name="location"
             value={userData.location}
-            handleChange={handleChange}
+            handleFormRowChange={handleChange}
           />
           <button className="btn btn-block" type="submit" disabled={isLoading}>
             {isLoading ? "Please Wait..." : "save changes"}

@@ -23,7 +23,7 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route index elemnt={<Stats />} />
+          <Route index element={<Stats />} />
           <Route path="all-jobs" element={<AllJobs />} />
           <Route path="add-job" element={<AddJob />} />
           <Route path="profile" element={<Profile />} />
@@ -33,7 +33,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </BrowserRouter>
   );
 }

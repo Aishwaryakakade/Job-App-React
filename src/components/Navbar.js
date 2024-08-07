@@ -18,17 +18,16 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div className="nav-center">
-        <button
-          type="button"
-          className="toggle-btn"
-          onClick={() => console.log("toggle sidebar")}
-        >
+        {/* Icon  on left */}
+        <button type="button" className="toggle-btn" onClick={toggle}>
           <FaAlignLeft />
         </button>
+        {/* Title */}
         <div>
           <Logo />
           <h3 className="logo-text">dashboard</h3>
         </div>
+        {/* Logout buttton */}
         <div className="btn-container">
           <button
             type="button"
