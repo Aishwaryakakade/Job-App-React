@@ -66,6 +66,9 @@ const allJobsSlice = createSlice({
     clearSearchFilters: (state) => {
       return { ...state, ...initialFiltersState };
     },
+    changePage: (state, { payload }) => {
+      state.page = payload;
+    },
   },
   extraReducers: {
     [getAllJobs.pending]: (state) => {
@@ -104,5 +107,6 @@ export const {
   hideLoading,
   handleSearchChange,
   clearSearchFilters,
+  changePage,
 } = allJobsSlice.actions;
 export default allJobsSlice.reducer;
